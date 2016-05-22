@@ -87,14 +87,12 @@ public class SortedArrayStructure extends StudentListings {
 		}
 
 		// here we are comparing against student in first index
+		//The name of student inserted is not an array
 		if (student.compareTo(students[0].name) < 0)// that means it's -1 and
-													// the name of student
-													// inserted is not in the
-													// array
+											
 		{
-			for (int j = next; j > 0; j--)// at this point j = next that is
-											// next+1 already so, j>0 which is
-											// true
+			// at this point j = next that is
+											
 			{
 				students[j] = students[j - 1];
 			}
