@@ -6,7 +6,7 @@
  * 
  * This program evaluates the arithmetic expression written in post fixed notation
  * The arithmetic expression will be input as a string by the user and will contain 
- * only integers operands for the program to work. Then following code below then parses the 
+ * only integers operands for the program to work. Then following code below parses the 
  * integers and operators from the input string and outputs the calculation of the expression
  */
 
@@ -42,8 +42,11 @@ public class PostfixeNotationNumber {
 			StringTokenizer tokens = new StringTokenizer(mathExpression);
 
 			while (tokens.hasMoreTokens()) {
+				//we want to iterate through the mathExpression
 				thisToken = tokens.nextToken();
 
+                                //I wanted to saperate operators from operands (math symbols from numbers)
+                                //if the iteration encounters a math symbol, push it into a different stack else it's a number
 				if (!"+".equals(thisToken) && !"*".equals(thisToken) && !"-".equals(thisToken)
 						&& !"/".equals(thisToken)) {
 					s.push(Integer.parseInt(thisToken));
